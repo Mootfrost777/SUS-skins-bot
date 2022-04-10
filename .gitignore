@@ -1,0 +1,7 @@
+venv/
+db.sqlite3
+skins/
+__pycache__/
+new_skins/
+config.py
+.idea/
