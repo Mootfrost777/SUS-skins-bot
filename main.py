@@ -13,7 +13,7 @@ def scan_skins():
     conn = sqlite3.connect('db.sqlite3')
     cursor = conn.cursor()
     for file in files:
-        f = file.strip('.png.gif').split('_')
+        f = file.rstrip('.png.gif').split('_')
         cursor.execute("INSERT INTO skins (path, name, description, author) VALUES (?, ?, ?, ?)", (file, f[0], f[1], f[2]))
     conn.commit()
     cursor.close()
